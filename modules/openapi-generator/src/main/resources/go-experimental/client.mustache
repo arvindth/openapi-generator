@@ -53,8 +53,12 @@ type APIClient struct {
 {{/apiInfo}}
 }
 
+type APIRequest interface {
+}
+
 type service struct {
 	client *APIClient
+  request APIRequest
 }
 
 // NewAPIClient creates a new API client. Requires a userAgent string describing your application.
